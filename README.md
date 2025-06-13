@@ -79,6 +79,7 @@ Sample `INSERT` statements are provided for:
 - Projects
 - Employee-Project assignments
 - Project Managers
+![image](https://github.com/user-attachments/assets/f13d0d12-277d-40d0-bbdd-a9a119b71021)
 
 
 

@@ -2,7 +2,7 @@
 
 This project is a relational database designed to manage and track research projects, employees involved, funding agencies, and managerial responsibilities. The database schema is modeled using an Entity-Relationship approach and implemented in SQL.
 
----
+
 
 ## 🏗️ Database Tables Overview
 
@@ -14,7 +14,7 @@ This project is a relational database designed to manage and track research proj
 | Duration    | INT            | Duration of the project (months)  |
 | Budget      | DECIMAL(12,2)  | Budget allocated to the project   |
 
----
+
 
 ### 📁 `fundingagency` Table
 | Column Name | Data Type      | Description                       |
@@ -23,7 +23,7 @@ This project is a relational database designed to manage and track research proj
 | Name        | VARCHAR(100)   | Name of the funding agency        |
 | Address     | VARCHAR(255)   | Address of the funding agency     |
 
----
+
 
 ### 📁 `employee` Table
 | Column Name | Data Type      | Description                       |
@@ -32,7 +32,7 @@ This project is a relational database designed to manage and track research proj
 | Emp_Name    | VARCHAR(50)    | Name of the employee              |
 | Salary      | DECIMAL(10,0)  | Employee's salary                 |
 
----
+
 
 ### 📁 `employee_project` Table
 > Junction table to track which employee works on which project and their project manager.
@@ -43,7 +43,7 @@ This project is a relational database designed to manage and track research proj
 | Project_ID  | INT (FK)  | Refers to `project.Project_ID`     |
 | Manager_SSN | INT       | Manager’s SSN (FK to `employee.SSN`) |
 
----
+
 
 ### 📁 `project_manager` Table
 > Tracks which employee manages which project.
@@ -53,7 +53,7 @@ This project is a relational database designed to manage and track research proj
 | Project_ID  | INT (FK)  | Refers to `project.Project_ID`     |
 | Manager_SSN | INT (FK)  | Refers to `employee.SSN`           |
 
----
+
 
 ## 🔗 Relationships
 
@@ -62,7 +62,7 @@ This project is a relational database designed to manage and track research proj
 - A **funding agency** can fund multiple **projects**, but each **project** is funded by exactly one **agency**
 - Project names are **unique within each agency**
 
----
+
 
 ## 🛠️ SQL Features Used
 - Primary & Foreign Key constraints
@@ -70,7 +70,7 @@ This project is a relational database designed to manage and track research proj
 - Normalized schema
 - One-to-one and many-to-many relationship modeling
 
----
+
 
 ## 🚀 Sample Data Included
 Sample `INSERT` statements are provided for:
